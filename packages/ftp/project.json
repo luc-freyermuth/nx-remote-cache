@@ -1,0 +1,46 @@
+{
+  "root": "packages/ftp",
+  "sourceRoot": "packages/ftp/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/ftp/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/ftp"],
+      "options": {
+        "jestConfig": "packages/ftp/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/ftp",
+        "tsConfig": "packages/ftp/tsconfig.lib.json",
+        "packageJson": "packages/ftp/package.json",
+        "main": "packages/ftp/src/index.ts",
+        "assets": [
+          "packages/ftp/*.md",
+          {
+            "input": "./packages/ftp/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/ftp/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}

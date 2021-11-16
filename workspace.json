@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "ftp": "packages/ftp",
+    "ftp-e2e": "e2e/ftp-e2e",
+    "runner": "packages/runner",
+    "runner-e2e": "e2e/runner-e2e"
+  }
+}

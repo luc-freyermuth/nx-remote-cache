@@ -1,0 +1,5 @@
+{
+  "name": "@nx-remote-cache/runner",
+  "version": "0.0.1",
+  "main": "src/index.js"
+}
